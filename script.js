@@ -17,9 +17,9 @@ closeCart.addEventListener('click', () => {
 })
 
     const addDataToHTML = () => {
-    // remove datas default from HTML
+    
 
-        // add new datas
+        
         if(products.length > 0) // if has data
         {
             products.forEach(product => {
@@ -138,14 +138,14 @@ const changeQuantityCart = (product_id, type) => {
 }
 
 const initApp = () => {
-    // get data product
+    
     fetch('products.json')
     .then(response => response.json())
     .then(data => {
         products = data;
         addDataToHTML();
 
-        // get data cart from memory
+        
         if(localStorage.getItem('cart')){
             cart = JSON.parse(localStorage.getItem('cart'));
             addCartToHTML();
